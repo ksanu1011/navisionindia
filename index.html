@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navision India | Microsoft Dynamics 365 ERP Partner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="tb">
+    <div class="tb-l">
+      <a href="mailto:info@navisionindia.in">info@navisionindia.in</a>
+      <span>|</span><a href="tel:+16302149700">+1 630 214 9700</a>
+      <span>|</span><a href="tel:+919999999999">+91 99999 99999</a>
+    </div>
+    <div class="tb-r">
+      <a href="#">White Papers</a>
+      <a href="#">Blog</a>
+      <a href="#">Case Studies</a>
+      <a href="#">Careers</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav">
+  <div class="nav-inner" id="navInner">
+    <a href="#" class="logo">
+      <div class="logo-ic"><svg viewBox="0 0 24 24"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 4l4-4 4 4-4 4-4-4z"/></svg></div>
+      <div class="logo-name">Navision<span>India</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="#" class="nav-plain">Home</a>
+
+      <!-- SOLUTIONS (merged with services) -->
+      <div class="nav-item" id="ni-sol">
+        <button class="nav-btn" onclick="tog('sol')">Solutions &amp; Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega-wrap" id="mw-sol">
+          <div class="mega-box">
+            <div class="mega-stripe"></div>
+            <div class="mega-layout" style="min-height:360px">
+              <!-- Sidebar: platforms first, then service types -->
+              <div class="mega-sidebar">
+                <div class="sb-label">By Platform</div>
+                <div class="stab active" data-m="sol" data-p="bc" onmouseenter="sp('sol','bc')" tabindex="0" role="button"><div class="tl">Business Central</div><div class="td">Cloud ERP for SMBs</div></div>
+                <div class="stab" data-m="sol" data-p="fo" onmouseenter="sp('sol','fo')" tabindex="0" role="button"><div class="tl">Dynamics 365 F&amp;O</div><div class="td">Enterprise ERP</div></div>
+                <div class="stab" data-m="sol" data-p="nav" onmouseenter="sp('sol','nav')" tabindex="0" role="button"><div class="tl">Dynamics NAV</div><div class="td">Legacy NAV / Navision</div></div>
+                <div class="sb-divider"></div>
+                <div class="sb-label">By Service</div>
+                <div class="stab" data-m="sol" data-p="impl" onmouseenter="sp('sol','impl')" tabindex="0" role="button"><div class="tl">Implementation</div><div class="td">Go-live delivery</div></div>
+                <div class="stab" data-m="sol" data-p="custom" onmouseenter="sp('sol','custom')" tabindex="0" role="button"><div class="tl">Customization</div><div class="td">Tailor to your workflow</div></div>
+                <div class="stab" data-m="sol" data-p="integ" onmouseenter="sp('sol','integ')" tabindex="0" role="button"><div class="tl">Integration</div><div class="td">Connect your systems</div></div>
+                <div class="stab" data-m="sol" data-p="support" onmouseenter="sp('sol','support')" tabindex="0" role="button"><div class="tl">Support &amp; Upgrade</div><div class="td">24×7 help &amp; migrations</div></div>
+                <a class="sb-cta" href="#contact" onclick="closeAll()">Book a Demo</a>
+              </div>
+
+              <!-- Panels -->
+              <div class="mega-panels" onmouseleave="resetPv('sol')">
+
+                <!-- BC panel -->
+                <div class="mpanel grid2 active" id="sol-bc">
+                  <div class="ptitle">Dynamics 365 Business Central</div>
+                  <div class="mitem" onmouseenter="pv('sol','bc-overview')"><div class="mico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div><div class="mn">BC Overview</div><div class="ms2">What Business Central does</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','bc-impl')"><div class="mico"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div><div class="mn">Implementation</div><div class="ms2">End-to-end go-live</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','bc-custom')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div><div class="mn">Customization &amp; Dev</div><div class="ms2">AL extensions &amp; UI tailoring</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','bc-integ')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><div><div class="mn">Integration</div><div class="ms2">Shopify, M365, banks</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','bc-support')"><div class="mico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div><div><div class="mn">Support &amp; Maintenance</div><div class="ms2">24×7 helpdesk &amp; SLA</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','bc-upgrade')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></div><div><div class="mn">NAV → BC Upgrade</div><div class="ms2">Cloud migration, zero data loss</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','bc-license')"><div class="mico"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div><div class="mn">Licensing &amp; Pricing</div><div class="ms2">~$70/user/month and up</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','bc-portal')"><div class="mico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div><div class="mn">Portal Development</div><div class="ms2">Vendor &amp; customer portals</div></div></div>
+                </div>
+
+                <!-- F&O panel -->
+                <div class="mpanel grid2" id="sol-fo">
+                  <div class="ptitle">Dynamics 365 Finance &amp; Operations</div>
+                  <div class="mitem" onmouseenter="pv('sol','fo-impl')"><div class="mico"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div><div class="mn">F&amp;O Implementation</div><div class="ms2">Enterprise-grade deployment</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','fo-custom')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div><div class="mn">Customization</div><div class="ms2">Extend and tailor F&amp;O</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','fo-integ')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><div><div class="mn">Integration</div><div class="ms2">Connect finance systems</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','fo-support')"><div class="mico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div><div><div class="mn">Support</div><div class="ms2">Ongoing managed care</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','fo-consult')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div><div class="mn">Consulting &amp; Roadmap</div><div class="ms2">Strategy &amp; ROI planning</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','fo-license')"><div class="mico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 13h4"/></svg></div><div><div class="mn">Licensing &amp; Pricing</div><div class="ms2">Finance, SCM &amp; full-suite</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','fo-scm')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3M16 11h6l-3 6H13l-3-6h6z"/></svg></div><div><div class="mn">Supply Chain Mgmt</div><div class="ms2">Warehouse, logistics, MFG</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','fo-ai')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M12 8v4l3 3"/></svg></div><div><div class="mn">Copilot &amp; AI</div><div class="ms2">AI-powered automation</div></div></div>
+                </div>
+
+                <!-- NAV panel -->
+                <div class="mpanel grid2" id="sol-nav">
+                  <div class="ptitle">Microsoft Dynamics NAV / Navision</div>
+                  <div class="mitem" onmouseenter="pv('sol','nav-impl')"><div class="mico"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div><div class="mn">NAV Implementation</div><div class="ms2">Full Navision deployment</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','nav-custom')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div><div class="mn">Customization &amp; Dev</div><div class="ms2">C/AL modules, UI, workflows</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','nav-integ')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><div><div class="mn">Integration</div><div class="ms2">E-commerce, M365, banks</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','nav-support')"><div class="mico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div><div><div class="mn">NAV Support</div><div class="ms2">All versions, 24×7</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','nav-upgrade')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></div><div><div class="mn">Upgrade to BC</div><div class="ms2">NAV 2009–2018 migration</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','nav-report')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div><div class="mn">Report Development</div><div class="ms2">SSRS, Power BI &amp; Excel</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','nav-portal')"><div class="mico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div><div class="mn">Portal Development</div><div class="ms2">Vendor &amp; customer portals</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','nav-data')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg></div><div><div class="mn">Data Migration</div><div class="ms2">Structured transfer &amp; validation</div></div></div>
+                </div>
+
+                <!-- Implementation service panel -->
+                <div class="mpanel grid2" id="sol-impl">
+                  <div class="ptitle">Implementation — across all platforms</div>
+                  <div class="mitem" onmouseenter="pv('sol','impl-bc')"><div class="mico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div><div class="mn">Business Central Impl.</div><div class="ms2">Cloud &amp; on-premises</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','impl-fo')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><div><div class="mn">F&amp;O Implementation</div><div class="ms2">Enterprise-scale deployment</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','impl-nav')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div><div><div class="mn">Navision Implementation</div><div class="ms2">NAV for SMEs</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','impl-training')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div><div class="mn">User Training</div><div class="ms2">Onboarding &amp; adoption</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','impl-post')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><div class="mn">Post-Go-Live Support</div><div class="ms2">Hyper-care period</div></div></div>
+                </div>
+
+                <!-- Customization service panel -->
+                <div class="mpanel grid2" id="sol-custom">
+                  <div class="ptitle">Customization &amp; Development</div>
+                  <div class="mitem" onmouseenter="pv('sol','custom-nav')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div><div class="mn">NAV Customization</div><div class="ms2">C/AL modules, UI &amp; workflows</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','custom-bc')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div><div class="mn">BC Extension Dev (AL)</div><div class="ms2">AppSource-ready extensions</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','custom-report')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><div><div class="mn">Report Development</div><div class="ms2">Power BI, SSRS, Excel</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','custom-role')"><div class="mico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div><div class="mn">UI &amp; Role Center Tailoring</div><div class="ms2">Fit the interface to your team</div></div></div>
+                </div>
+
+                <!-- Integration service panel -->
+                <div class="mpanel grid2" id="sol-integ">
+                  <div class="ptitle">Integration Services</div>
+                  <div class="mitem" onmouseenter="pv('sol','integ-shopify')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg></div><div><div class="mn">Shopify Integration</div><div class="ms2">Real-time order &amp; inventory sync</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','integ-m365')"><div class="mico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div><div class="mn">Microsoft 365</div><div class="ms2">Outlook, Excel, Teams</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','integ-bank')"><div class="mico"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div><div><div class="mn">Bank Reconciliation</div><div class="ms2">Auto-reconcile transactions</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','integ-api')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18"/></svg></div><div><div class="mn">API &amp; Third-party</div><div class="ms2">Custom connector development</div></div></div>
+                </div>
+
+                <!-- Support + Upgrade service panel -->
+                <div class="mpanel grid2" id="sol-support">
+                  <div class="ptitle">Support, Maintenance &amp; Upgrades</div>
+                  <div class="mitem" onmouseenter="pv('sol','sup-247')"><div class="mico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div><div><div class="mn">24×7 Helpdesk</div><div class="ms2">All NAV &amp; BC versions</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','sup-remote')"><div class="mico"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div><div class="mn">Remote Support (VPN)</div><div class="ms2">Secure desktop sessions</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','sup-amc')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><div class="mn">Annual Maintenance</div><div class="ms2">SLA-backed contracts</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','upg-nav2bc')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></div><div><div class="mn">NAV → Business Central</div><div class="ms2">Cloud migration, zero data loss</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','upg-data')"><div class="mico"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg></div><div><div class="mn">Data Migration</div><div class="ms2">Structured transfer &amp; validation</div></div></div>
+                  <div class="mitem" onmouseenter="pv('sol','upg-version')"><div class="mico"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><div><div class="mn">Version Upgrades</div><div class="ms2">NAV 2009 → 2013 → 2018 → BC</div></div></div>
+                </div>
+
+              </div>
+              <div class="mega-preview" id="prev-sol">
+                <div class="pv-idle"><div class="pv-idle-ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><p>Hover any item to see what's included.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INDUSTRIES -->
+      <div class="nav-item" id="ni-ind">
+        <button class="nav-btn" onclick="tog('ind')">Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="sdrop-wrap" id="mw-ind">
+          <div class="sdrop-inner" id="sdrop-ind-inner">
+            <div class="sdrop-box">
+              <div class="sdrop-list">
+                <div class="stitle">Industries We Serve</div>
+                <a class="slink" href="#industries"><span class="sdot"></span>Manufacturing</a>
+                <a class="slink" href="#industries"><span class="sdot"></span>Retail &amp; E-Commerce</a>
+                <a class="slink" href="#industries"><span class="sdot"></span>Wholesale Distribution</a>
+                <a class="slink" href="#industries"><span class="sdot"></span>Healthcare</a>
+                <a class="slink" href="#industries"><span class="sdot"></span>Hospitality</a>
+                <a class="slink" href="#industries"><span class="sdot"></span>Finance &amp; Accounting</a>
+                <a class="slink" href="#industries"><span class="sdot"></span>IT / ITES Services</a>
+                <a class="slink" href="#industries"><span class="sdot"></span>Non-Profit</a>
+                <a class="slink" href="#industries"><span class="sdot"></span>Diamond Industry</a>
+                <a class="slink" href="#industries"><span class="sdot"></span>Apparel &amp; Fashion</a>
+                <a class="slink" href="#industries"><span class="sdot"></span>Oil &amp; Gas</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESOURCES -->
+      <div class="nav-item" id="ni-res">
+        <button class="nav-btn" onclick="tog('res')">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="sdrop-wrap" id="mw-res">
+          <div class="sdrop-inner" id="sdrop-res-inner">
+            <div class="sdrop-box">
+              <div class="sdrop-list">
+                <div class="stitle">Learn &amp; Grow</div>
+                <a class="slink" href="#"><span class="sdot"></span>Blog &amp; Articles</a>
+                <a class="slink" href="#"><span class="sdot"></span>Case Studies</a>
+                <a class="slink" href="#"><span class="sdot"></span>White Papers</a>
+                <a class="slink" href="#"><span class="sdot"></span>Webinars</a>
+                <a class="slink" href="#"><span class="sdot"></span>FAQs</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="nav-plain">About</a>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="search-wrap">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input type="text" id="navSearch" class="search-input" placeholder="Search services…" autocomplete="off"
+        oninput="onSearchInput(this.value)"
+        onkeydown="if(event.key==='Escape'){this.value='';hideSearch();this.blur();}
+                   if(event.key==='ArrowDown'){event.preventDefault();var f=document.querySelector('.sr-item');if(f)f.focus();}">
+      <div class="search-results" id="searchResults"></div>
+    </div>
+
+    <a href="#contact" class="nav-cta">Book a Demo</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-in">
+    <div>
+      <div class="ms-badge">
+        <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><path fill="#f25022" d="M1 1h10v10H1z"/><path fill="#00a4ef" d="M12 1h10v10H12z"/><path fill="#7fba00" d="M1 12h10v10H1z"/><path fill="#ffb900" d="M12 12h10v10H12z"/></svg>
+        <span>Microsoft Dynamics 365 Partner — India, USA &amp; Australia</span>
+      </div>
+      <div class="hero-tag"><span class="hero-tag-dot"></span>Trusted since 2007 &middot; 500+ clients &middot; 3 countries</div>
+      <h1>Run your business on <span>Microsoft Dynamics</span> — the right way</h1>
+      <p class="hero-sub">Navision India implements, customizes, integrates, and supports Dynamics 365 Business Central, F&amp;O, and Navision ERP for manufacturers, distributors, and service businesses across India, US, and Australia.</p>
+      <div class="hero-acts">
+        <a href="#contact" class="btn-p">Schedule a Free Demo <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="#solutions" class="btn-o">Explore Solutions <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hc-title">Our core platforms</div>
+      <div class="hero-sol"><div class="hs-ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div><div class="hs-name">Dynamics 365 Business Central</div><div class="hs-desc">Cloud ERP for growing businesses</div></div></div>
+      <div class="hero-sol"><div class="hs-ic"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><div><div class="hs-name">Dynamics 365 Finance &amp; Ops</div><div class="hs-desc">Enterprise-grade ERP at scale</div></div></div>
+      <div class="hero-sol"><div class="hs-ic"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div><div><div class="hs-name">Microsoft Dynamics NAV</div><div class="hs-desc">Legacy NAV support &amp; upgrades</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-in">
+    <div class="stat"><div class="stat-n">17+</div><div class="stat-l">Years in Business</div></div>
+    <div class="stat"><div class="stat-n">500+</div><div class="stat-l">Clients Served</div></div>
+    <div class="stat"><div class="stat-n">3</div><div class="stat-l">Countries Served</div></div>
+    <div class="stat"><div class="stat-n">24×7</div><div class="stat-l">Support Coverage</div></div>
+  </div>
+</div>
+
+<!-- SOLUTIONS + SERVICES (unified) -->
+<section class="section" id="solutions">
+  <div class="section-in">
+    <div class="sec-hdr">
+      <div>
+        <div class="ey">Solutions &amp; Services</div>
+        <div class="sec-title">Everything your business needs<br>on one Microsoft platform</div>
+        <div class="sec-sub">Browse by platform or by the type of help you need — implementation, customization, integration, support, or upgrades.</div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="sol-tabs">
+      <div class="sol-tab active" onclick="switchTab('platforms')">By Platform</div>
+      <div class="sol-tab" onclick="switchTab('services')">By Service Type</div>
+    </div>
+
+    <!-- Platforms pane -->
+    <div class="sol-pane active" id="pane-platforms">
+      <div class="plat-grid">
+        <div class="plat-card">
+          <div class="plat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+          <div class="plat-name">Dynamics 365 Business Central</div>
+          <div class="plat-desc">A modern cloud ERP that unifies finance, inventory, operations, and sales. Purpose-built for SMBs ready to scale beyond spreadsheets — deployable on cloud or on-premises.</div>
+          <div class="plat-services">
+            <div class="plat-svc">Implementation &amp; Go-Live</div>
+            <div class="plat-svc">Customization &amp; AL Extensions</div>
+            <div class="plat-svc">Shopify / M365 / Bank Integration</div>
+            <div class="plat-svc">24×7 Support &amp; AMC</div>
+            <div class="plat-svc">NAV → BC Upgrade &amp; Migration</div>
+            <div class="plat-svc">Vendor &amp; Customer Portals</div>
+          </div>
+          <a href="#" class="plat-link">Explore Business Central <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="plat-card">
+          <div class="plat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div>
+          <div class="plat-name">Dynamics 365 Finance &amp; Operations</div>
+          <div class="plat-desc">Enterprise ERP for large organizations managing complex financials, global operations, supply chains, and manufacturing. Backed by Microsoft Azure and Copilot AI.</div>
+          <div class="plat-services">
+            <div class="plat-svc">F&amp;O Implementation &amp; Rollout</div>
+            <div class="plat-svc">Customization &amp; Development</div>
+            <div class="plat-svc">Finance, SCM &amp; Manufacturing</div>
+            <div class="plat-svc">Consulting &amp; Roadmap Planning</div>
+            <div class="plat-svc">Licensing &amp; Pricing Guidance</div>
+            <div class="plat-svc">Copilot &amp; AI Integration</div>
+          </div>
+          <a href="#" class="plat-link">Explore F&amp;O <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="plat-card">
+          <div class="plat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+          <div class="plat-name">Microsoft Dynamics NAV / Navision</div>
+          <div class="plat-desc">Full support, customization, and upgrade services for all Navision versions — 2009 through 2018. We also handle seamless migration paths to Business Central.</div>
+          <div class="plat-services">
+            <div class="plat-svc">NAV Implementation &amp; Setup</div>
+            <div class="plat-svc">Customization in C/AL</div>
+            <div class="plat-svc">Shopify, M365 &amp; Bank Integration</div>
+            <div class="plat-svc">24×7 NAV Support</div>
+            <div class="plat-svc">Version Upgrades (2009–2018)</div>
+            <div class="plat-svc">Data Migration &amp; Code Upgrade</div>
+          </div>
+          <a href="#" class="plat-link">Explore Dynamics NAV <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services pane -->
+    <div class="sol-pane" id="pane-services">
+      <div class="svc-grid">
+        <div class="svc-block">
+          <div class="svc-block-t"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Implementation</div>
+          <ul class="svc-list">
+            <li>Business Central Implementation</li>
+            <li>D365 F&amp;O Implementation</li>
+            <li>Navision / NAV Implementation</li>
+            <li>User Training &amp; Onboarding</li>
+            <li>Post-Go-Live Hyper-Care</li>
+          </ul>
+        </div>
+        <div class="svc-block">
+          <div class="svc-block-t"><svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>Customization &amp; Dev</div>
+          <ul class="svc-list">
+            <li>NAV Customization (C/AL)</li>
+            <li>BC Extension Development (AL)</li>
+            <li>Report Development (SSRS / Power BI)</li>
+            <li>UI &amp; Role Center Tailoring</li>
+            <li>Workflow &amp; Approval Automation</li>
+          </ul>
+        </div>
+        <div class="svc-block">
+          <div class="svc-block-t"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>Integration</div>
+          <ul class="svc-list">
+            <li>Shopify + NAV / BC Connector</li>
+            <li>Microsoft 365 (Outlook, Excel, Teams)</li>
+            <li>Bank Feed &amp; Reconciliation</li>
+            <li>Third-party API Connectors</li>
+            <li>Logistics &amp; 3PL Platforms</li>
+          </ul>
+        </div>
+        <div class="svc-block">
+          <div class="svc-block-t"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>Support &amp; Maintenance</div>
+          <ul class="svc-list">
+            <li>24×7 Helpdesk (All versions)</li>
+            <li>Remote Desktop Support (VPN)</li>
+            <li>Annual Maintenance Contracts</li>
+            <li>Bug Fixes &amp; Performance Tuning</li>
+            <li>Dedicated Account Manager</li>
+          </ul>
+        </div>
+        <div class="svc-block">
+          <div class="svc-block-t"><svg viewBox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>Upgrade &amp; Migration</div>
+          <ul class="svc-list">
+            <li>NAV → Business Central Cloud</li>
+            <li>Data Migration &amp; Validation</li>
+            <li>Version Upgrades (2009–2018)</li>
+            <li>Code Upgrade &amp; Object Merging</li>
+            <li>Post-Migration Training</li>
+          </ul>
+        </div>
+        <div class="svc-block">
+          <div class="svc-block-t"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>Portal Development</div>
+          <ul class="svc-list">
+            <li>Vendor Self-Service Portal</li>
+            <li>Customer Order &amp; Invoice Portal</li>
+            <li>Custom Web Portals for NAV/BC</li>
+            <li>Cloud-based Collaboration Tools</li>
+            <li>Hosting &amp; Maintenance Available</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="section alt" id="industries">
+  <div class="section-in">
+    <div class="sec-hdr">
+      <div>
+        <div class="ey">Who we serve</div>
+        <div class="sec-title">Industry expertise that runs deep</div>
+      </div>
+      <a href="#" class="lmore">All industries →</a>
+    </div>
+    <div class="ind-grid">
+      <div class="ind-card"><div class="ind-ic" style="background:#EBF4FE;color:#0078D4"><svg viewBox="0 0 24 24"><path d="M2 20h20M5 20V8l7-5 7 5v12M9 20v-5h6v5"/></svg></div><div class="ind-name">Manufacturing</div><div class="ind-desc">Production planning, BOM, capacity management</div></div>
+      <div class="ind-card"><div class="ind-ic" style="background:#FFF3E0;color:#F57C00"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div><div class="ind-name">Retail &amp; E-Commerce</div><div class="ind-desc">POS, omnichannel, inventory &amp; Shopify integration</div></div>
+      <div class="ind-card"><div class="ind-ic" style="background:#E8F5E9;color:#2E7D32"><svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3M16 11h6l-3 6H13l-3-6h6z"/></svg></div><div class="ind-name">Wholesale Distribution</div><div class="ind-desc">Forecasting, purchasing, warehouse &amp; demand planning</div></div>
+      <div class="ind-card"><div class="ind-ic" style="background:#FCE4EC;color:#C62828"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div class="ind-name">Healthcare</div><div class="ind-desc">Patient data, billing, compliance &amp; care coordination</div></div>
+      <div class="ind-card"><div class="ind-ic" style="background:#EDE7F6;color:#6A1B9A"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div><div class="ind-name">Hospitality</div><div class="ind-desc">Reservations, F&amp;B, property &amp; revenue management</div></div>
+      <div class="ind-card"><div class="ind-ic" style="background:#E3F2FD;color:#1565C0"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div class="ind-name">Finance &amp; Accounting</div><div class="ind-desc">Ledgers, VAT, cash flow &amp; financial reporting</div></div>
+      <div class="ind-card"><div class="ind-ic" style="background:#F3E5F5;color:#7B1FA2"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div class="ind-name">IT / ITES Services</div><div class="ind-desc">Project accounting, resource planning &amp; PSA</div></div>
+      <div class="ind-card"><div class="ind-ic" style="background:#FFF8E1;color:#F9A825"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div><div class="ind-name">Non-Profit</div><div class="ind-desc">Fundraising, memberships, volunteer &amp; donor management</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US / ABOUT -->
+<section class="section" id="about">
+  <div class="section-in">
+    <div class="ey">Why Navision India</div>
+    <div class="sec-title" style="margin-bottom:36px">Microsoft Dynamics specialists since 2007</div>
+    <div class="why-grid">
+      <div class="why-pts">
+        <div class="why-pt">
+          <div class="why-ic"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+          <div><div class="why-pt-t">Certified Microsoft Partner</div><div class="why-pt-d">Accredited reseller of Business Central licenses with deep Microsoft ecosystem knowledge across D365, Azure, and Power Platform.</div></div>
+        </div>
+        <div class="why-pt">
+          <div class="why-ic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+          <div><div class="why-pt-t">Expert Consultants On Demand</div><div class="why-pt-d">Functional and technical NAV/BC consultants who understand your industry, not just the software. Available onsite and remotely across India, US, and Australia.</div></div>
+        </div>
+        <div class="why-pt">
+          <div class="why-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+          <div><div class="why-pt-t">24×7 Support Guarantee</div><div class="why-pt-d">Around-the-clock helpdesk covering all NAV versions and Business Central — remote access, troubleshooting, and performance optimization.</div></div>
+        </div>
+        <div class="why-pt">
+          <div class="why-ic"><svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3M16 11h6l-3 6H13l-3-6h6z"/></svg></div>
+          <div><div class="why-pt-t">Global Delivery, Local Expertise</div><div class="why-pt-d">Offices and clients in India, the US, and Australia — with country-specific compliance knowledge baked into every implementation.</div></div>
+        </div>
+      </div>
+      <div class="why-visual">
+        <div class="why-vis-t">Our track record</div>
+        <div class="why-stat"><span class="why-stat-l">Implementations delivered</span><span class="why-stat-v">300+</span></div>
+        <div class="why-stat"><span class="why-stat-l">Avg. implementation time</span><span class="why-stat-v">6 wks</span></div>
+        <div class="why-stat"><span class="why-stat-l">Client retention rate</span><span class="why-stat-v">92%</span></div>
+        <div class="why-stat"><span class="why-stat-l">Support response SLA</span><span class="why-stat-v">&lt;2 hrs</span></div>
+        <div class="why-stat"><span class="why-stat-l">Years as Microsoft partner</span><span class="why-stat-v">17+</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band" id="contact">
+  <h2>Ready to transform your business?</h2>
+  <p>Talk to a Navision India consultant today — we'll map out the right Dynamics 365 solution for your needs, free of charge.</p>
+  <div class="cta-acts">
+    <a href="mailto:info@navisionindia.in" class="btn-w">Book a Free Consultation</a>
+    <a href="tel:+16302149700" class="btn-gw">Call +1 630 214 9700</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <div class="ft-logo"><div class="ft-logo-ic"><svg viewBox="0 0 24 24"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 4l4-4 4 4-4 4-4-4z"/></svg></div><span>NavisionIndia</span></div>
+        <p>Microsoft Dynamics 365 ERP implementation, customization, integration, and support services since 2007. Serving clients across India, USA, and Australia.</p>
+        <div class="ft-contacts">
+          <a href="mailto:info@navisionindia.in">info@navisionindia.in</a>
+          <a href="tel:+16302149700">+1 630 214 9700 (USA)</a>
+          <a href="tel:+919999999999">+91 99999 99999 (India)</a>
+        </div>
+      </div>
+      <div>
+        <div class="ft-col-t">Platforms</div>
+        <ul class="ft-links">
+          <li><a href="#">Business Central</a></li>
+          <li><a href="#">Dynamics 365 F&amp;O</a></li>
+          <li><a href="#">Dynamics NAV</a></li>
+          <li><a href="#">Supply Chain Mgmt</a></li>
+          <li><a href="#">Licensing &amp; Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="ft-col-t">Services</div>
+        <ul class="ft-links">
+          <li><a href="#">Implementation</a></li>
+          <li><a href="#">Customization</a></li>
+          <li><a href="#">Integration</a></li>
+          <li><a href="#">Support &amp; Maintenance</a></li>
+          <li><a href="#">NAV to BC Upgrade</a></li>
+          <li><a href="#">Portal Development</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="ft-col-t">Company</div>
+        <ul class="ft-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#industries">Industries</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span>© 2025 Navision India Infotech Pvt. Ltd. All rights reserved.</span>
+      <div class="ft-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Sitemap</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
